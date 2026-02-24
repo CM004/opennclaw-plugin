@@ -1,0 +1,33 @@
+{
+  "id": "adtech-mcp-bridge",
+  "name": "AdTech MCP Bridge",
+  "version": "1.0.0",
+  "description": "Bridges OpenClaw to a Python MCP server for AdTech campaign reporting and email dispatch.",
+  "entrypoint": "index.ts",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "serverScript": {
+        "type": "string",
+        "description": "Absolute path to mcp_server.py",
+        "default": ""
+      },
+      "pythonCommand": {
+        "type": "string",
+        "description": "Python executable (e.g., python3)",
+        "default": "python3"
+      },
+      "apiBaseUrl": {
+        "type": "string",
+        "description": "Base URL for the AdTech API",
+        "default": "http://localhost:8000"
+      },
+      "requestTimeoutMs": {
+        "type": "number",
+        "description": "MCP call timeout in milliseconds",
+        "default": 45000
+      }
+    },
+    "required": []
+  }
+}

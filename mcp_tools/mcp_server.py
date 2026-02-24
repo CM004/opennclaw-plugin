@@ -1,6 +1,9 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from mcp.server.fastmcp import FastMCP
 import requests
-from services.mailer import send_email
+from services.email import send_email
 
 mcp = FastMCP("AdTech Campaign Analyst")
 

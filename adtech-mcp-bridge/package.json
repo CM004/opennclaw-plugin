@@ -1,0 +1,20 @@
+{
+  "name": "adtech-mcp-bridge",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin bridging to a Python MCP stdio server for AdTech campaign reports",
+  "main": "index.ts",
+  "openclaw": {
+    "extensions": {
+      "type": "provider",
+      "entry": "./index.ts",
+      "schema": "1.0"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
+}
