@@ -1,0 +1,44 @@
+{
+  "id": "adtech-mcp-bridge",
+  "name": "AdTech MCP Bridge",
+  "version": "0.1.0",
+  "description": "Bridges OpenClaw tool calls to a stdio MCP server for ad-tech campaign workflows.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "pythonCommand": {
+        "type": "string",
+        "description": "Python executable to launch the MCP server",
+        "default": "python3"
+      },
+      "serverScript": {
+        "type": "string",
+        "description": "Absolute path to your mcp_server.py"
+      },
+      "apiBaseUrl": {
+        "type": "string",
+        "description": "Optional base URL passed to the MCP server process",
+        "default": "http://localhost:8000"
+      },
+      "defaultRecipientEmail": {
+        "type": "string",
+        "description": "Default recipient for report emails when user says 'email me'"
+      },
+      "requestTimeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 120000,
+        "default": 30000
+      }
+    },
+    "required": ["serverScript"]
+  },
+  "uiHints": {
+    "pythonCommand": { "label": "Python command", "placeholder": "python3" },
+    "serverScript": { "label": "MCP server script path", "placeholder": "/abs/path/to/mcp_server.py" },
+    "apiBaseUrl": { "label": "Campaign API base URL", "placeholder": "http://localhost:8000" },
+    "defaultRecipientEmail": { "label": "Default report recipient", "placeholder": "you@company.com" },
+    "requestTimeoutMs": { "label": "Request timeout (ms)" }
+  }
+}

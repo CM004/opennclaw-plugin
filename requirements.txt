@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+requests
+mcp[cli]
+mcp-use
+pydantic
+python-dotenv
