@@ -112,16 +112,17 @@ uvicorn ad_server.app:app --reload --port 8000
 
 # Terminal 2 — Start OpenClaw gateway and TUI
 openclaw gateway restart
-openclaw
+openclaw tui
 ```
 
 ## Usage
 
 In the OpenClaw TUI, type:
 
-```
 generate a report of top performing campaigns and send to you@gmail.com
-```
 
 The agent fetches campaign metrics from the FastAPI backend via the MCP server and emails a formatted report using the SMTP email service.
-```
+
+![alt text](Image.jpeg)
+
+![alt text](Image1.jpeg)
